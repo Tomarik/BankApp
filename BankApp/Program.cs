@@ -42,9 +42,10 @@ namespace BankApp
                         string userSelection = "";
                         decimal userMoney = 0.00M;
                         decimal accChange = 00.00M;
+                        //String receipt = String.Format("Total change to your account  ${0}\n" +
+                        // "Your current Account balance is ${1}", accChange, bank.activeUser.Balance);
                         String receipt = String.Format("Total change to your account  ${0}\n" +
-                            "Your current Account balance is ${1}", accChange, bank.activeUser.Balance);
-                        
+                            "Your current " + bank, accChange);
 
                         while (loggedIn)
                         {
@@ -63,7 +64,8 @@ namespace BankApp
                             
                             else if (userSelection == "b")
                             {
-                                System.Console.WriteLine("Account Balance $" + bank.activeUser.Balance);
+                                
+                                System.Console.WriteLine(bank);
                                 Console.ReadKey();
                             }
 

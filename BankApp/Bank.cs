@@ -27,6 +27,12 @@ namespace BankApp
             return false;
                 
             }
+
+        public override string ToString()
+        {
+            return "Account Balance $" + activeUser.Balance.ToString();
         }
+
+    }
     }
 
